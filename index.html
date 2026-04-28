@@ -19,7 +19,7 @@ background:#f6f1ff;
 overflow-x:hidden;
 }
 
-/* ---------- HERO ---------- */
+/* HOME */
 
 .hero{
 min-height:100vh;
@@ -35,8 +35,8 @@ position:absolute;
 top:70px;
 right:120px;
 font-size:150px;
-color:#d5c5ff;
 opacity:.2;
+color:#d5c5ff;
 }
 
 .hero::after{
@@ -45,8 +45,8 @@ position:absolute;
 bottom:70px;
 right:200px;
 font-size:170px;
-color:#d9ccff;
 opacity:.18;
+color:#d9ccff;
 }
 
 .content{
@@ -83,33 +83,12 @@ color:#65488f;
 margin-bottom:50px;
 }
 
-.btn{
-text-decoration:none;
-display:inline-block;
-padding:18px 40px;
-border-radius:40px;
-margin-right:18px;
-font-size:20px;
-}
-
-.btn1{
-background:#9273df;
-color:white;
-}
-
-.btn2{
-border:2px solid #9273df;
-background:white;
-color:#5b3f89;
-}
-
-/* ---------- ABOUT ---------- */
+/* ABOUT */
 
 .about-section{
 background:white;
 padding:120px 10%;
 display:flex;
-justify-content:space-between;
 gap:80px;
 }
 
@@ -163,100 +142,125 @@ font-size:28px;
 color:#4b2c74;
 }
 
-/* ---------- SKILLS TREE ---------- */
+/* SKILLS */
 
-.tree-section{
-background:#f6f1ff;
+.skills-section{
 padding:120px 10%;
+background:#f6f1ff;
 text-align:center;
-position:relative;
 }
 
-.tree-section h2{
-font-size:62px;
+.skills-section h2{
+font-size:72px;
 color:#4b2c74;
 margin-bottom:70px;
 }
 
-.tree-container{
-max-width:1100px;
+.tree{
+max-width:1200px;
 margin:auto;
 }
 
-.top-branch,
-.middle-row,
-.lower-branch{
+.programming{
+margin:0 auto 80px auto;
+background:#eee7ff;
+}
+
+.middle-row{
+display:grid;
+grid-template-columns:300px 440px 300px;
+justify-content:center;
+align-items:center;
+gap:80px;
+margin-bottom:80px;
+}
+
+.bottom-row{
+display:flex;
+justify-content:center;
+gap:180px;
+}
+
+.skill{
+width:300px;
+height:120px;
+background:white;
+border-radius:45px;
 display:flex;
 justify-content:center;
 align-items:center;
-gap:70px;
-margin-bottom:45px;
-flex-wrap:wrap;
-}
-
-.skill-node{
-background:white;
-padding:28px 45px;
-border-radius:50px;
-border:1px solid #e2d7fb;
-box-shadow:0 8px 18px rgba(150,130,210,.12);
+flex-direction:column;
 font-size:30px;
-color:#5a3d88;
 font-weight:bold;
+color:#4b2c74;
+box-shadow:0 8px 18px rgba(120,90,190,.08);
 }
 
-.skill-node span{
-display:block;
+.programming span{
 font-size:18px;
 font-weight:normal;
 margin-top:10px;
 }
 
-.main-node{
-background:#eee6ff;
-}
-
 .trunk{
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-
-.trunk-title{
+width:440px;
+height:130px;
 background:#9273df;
+border-radius:50px;
+display:flex;
+justify-content:center;
+align-items:center;
 color:white;
-padding:30px 55px;
-border-radius:55px;
-font-size:32px;
+font-size:38px;
 font-weight:bold;
 }
 
-.trunk-line{
-width:8px;
-height:100px;
-background:#b59be8;
-border-radius:20px;
-margin-top:12px;
+/* EDUCATION */
+
+.education-section{
+background:white;
+padding:120px 10%;
+text-align:center;
 }
 
-.tree-section::before{
-content:"❀";
-position:absolute;
-left:70px;
-top:90px;
-font-size:120px;
-opacity:.08;
-color:#8e70c9;
+.education-section h2{
+font-size:72px;
+color:#4b2c74;
+margin-bottom:70px;
 }
 
-.tree-section::after{
-content:"❁";
-position:absolute;
-right:70px;
-bottom:80px;
-font-size:120px;
-opacity:.08;
-color:#8e70c9;
+.edu-container{
+max-width:900px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:35px;
+}
+
+.edu-card{
+background:#f5efff;
+padding:45px;
+border-radius:40px;
+border:1px solid #e5dcfb;
+box-shadow:0 8px 18px rgba(170,150,220,.12);
+}
+
+.edu-card h3{
+font-size:34px;
+color:#5a3d88;
+margin-bottom:18px;
+}
+
+.edu-card p{
+font-size:24px;
+color:#6a5490;
+margin-bottom:15px;
+}
+
+.edu-card span{
+font-size:20px;
+font-style:italic;
+color:#8a72ba;
 }
 
 </style>
@@ -264,7 +268,7 @@ color:#8e70c9;
 
 <body>
 
-<!-- HERO -->
+<!-- HOME -->
 
 <section class="hero">
 
@@ -285,15 +289,13 @@ Fatima Jinnah Women University, keenly interested
 in creativity and coding.
 </p>
 
-<a href="#" class="btn btn1">View My Projects</a>
-<a href="#" class="btn btn2">Get In Touch</a>
-
 </div>
 
 </section>
 
 
-<!-- ABOUT -->
+
+<!-- WHO I AM -->
 
 <section class="about-section">
 
@@ -315,6 +317,7 @@ Beyond coding, I enjoy graphic designing, reading, and exploring emerging techno
 </p>
 
 </div>
+
 
 <div class="about-right">
 
@@ -343,7 +346,9 @@ Beyond coding, I enjoy graphic designing, reading, and exploring emerging techno
 </section>
 
 
-<!-- SKILLS SECTION -->
+
+<!-- SKILLS -->
+
 <section class="skills-section">
 
 <div class="section-tag">MY SKILLS</div>
@@ -377,113 +382,36 @@ Computer Science
 
 
 
-<style>
-.skills-section{
-padding:120px 10%;
-background:#f6f1ff;
-text-align:center;
-font-family:"Times New Roman",serif;
-}
+<!-- QUALIFICATIONS -->
 
-.section-tag{
-letter-spacing:5px;
-font-size:20px;
-color:#8b6acb;
-margin-bottom:20px;
-}
+<section class="education-section">
 
-.skills-section h2{
-font-size:78px;
-color:#4b2c74;
-margin-bottom:70px;
-}
+<p class="section-tag">ACADEMIC BACKGROUND</p>
+<h2>Qualifications</h2>
 
-.tree{
-max-width:1200px;
-margin:auto;
-}
+<div class="edu-container">
 
-/* top skill */
-.programming{
-margin:0 auto 80px auto;
-background:#eee7ff;
-}
+<div class="edu-card">
+<h3>🎓 BS Computer Science</h3>
+<p>Fatima Jinnah Women University</p>
+<span>2024–Present | 4th Semester</span>
+</div>
 
-/* middle row */
-.middle-row{
-display:grid;
-grid-template-columns:300px 440px 300px;
-justify-content:center;
-align-items:center;
-gap:80px;
-margin-bottom:80px;
-}
+<div class="edu-card">
+<h3>📘 Intermediate (ICS – Statistics)</h3>
+<p>Completed Intermediate Studies</p>
+<span>2024</span>
+</div>
 
-/* bottom row */
-.bottom-row{
-display:flex;
-justify-content:center;
-gap:180px;
-}
+<div class="edu-card">
+<h3>🏫 Matric (Science – Computer Science)</h3>
+<p>Completed Secondary Education</p>
+<span>2022</span>
+</div>
 
-/* all skill blocks */
-.skill{
-width:300px;
-height:120px;
-background:white;
-border-radius:45px;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-font-size:30px;
-font-weight:bold;
-color:#4b2c74;
-box-shadow:0 8px 18px rgba(120,90,190,.08);
-}
+</div>
 
-.programming span{
-font-size:18px;
-font-weight:normal;
-margin-top:10px;
-}
-
-/* center trunk */
-.trunk{
-width:440px;
-height:130px;
-background:#9273df;
-border-radius:50px;
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
-font-size:38px;
-font-weight:bold;
-box-shadow:0 12px 22px rgba(120,90,190,.2);
-}
-
-/* subtle floral decoration */
-.skills-section::before{
-content:"❀";
-position:absolute;
-left:35px;
-top:80px;
-font-size:90px;
-color:#e2d8ff;
-opacity:.35;
-}
-
-.skills-section::after{
-content:"❀";
-position:absolute;
-right:35px;
-bottom:70px;
-font-size:90px;
-color:#e2d8ff;
-opacity:.35;
-}
-</style>
+</section>
 
 </body>
 </html>
