@@ -11,53 +11,56 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:"Times New Roman", serif;
+font-family:"Times New Roman",serif;
 }
+
+/* HERO SECTION */
 
 body{
 background:#f6f1ff;
+overflow-x:hidden;
+}
+
+.hero{
 min-height:100vh;
 display:flex;
 align-items:center;
 padding-left:10%;
 position:relative;
-overflow:hidden;
 }
 
-/* floral accents */
-body::before{
+.hero::before{
 content:"❀";
 position:absolute;
 top:70px;
 right:120px;
 font-size:150px;
-opacity:0.18;
-color:#cdb9ff;
+color:#d5c5ff;
+opacity:.2;
 }
 
-body::after{
+.hero::after{
 content:"❁";
 position:absolute;
-bottom:60px;
-right:180px;
-font-size:180px;
-opacity:0.15;
-color:#d7c5ff;
+bottom:70px;
+right:200px;
+font-size:170px;
+color:#d9ccff;
+opacity:.18;
 }
 
-.hero{
+.content{
 max-width:850px;
-z-index:2;
 }
 
 .tag{
 display:inline-block;
 padding:12px 30px;
-border-radius:30px;
 background:#e8ddff;
-color:#5b3f89;
-letter-spacing:2px;
+border-radius:30px;
 font-size:18px;
+letter-spacing:2px;
+color:#5b3f89;
 margin-bottom:35px;
 }
 
@@ -65,22 +68,22 @@ h1{
 font-size:72px;
 line-height:1.15;
 color:#4b2c74;
-margin-bottom:28px;
+margin-bottom:25px;
 }
 
 .highlight{
 color:#7d5cc7;
 }
 
-p{
+.hero p{
 font-size:24px;
 line-height:1.7;
 max-width:700px;
-color:#644d8d;
+color:#65488f;
 margin-bottom:50px;
 }
 
-a{
+.btn{
 text-decoration:none;
 display:inline-block;
 padding:18px 40px;
@@ -96,13 +99,68 @@ color:white;
 
 .btn2{
 border:2px solid #9273df;
-background:#fcfbff;
+background:white;
 color:#5b3f89;
 }
 
-a:hover{
-transform:translateY(-3px);
-transition:.3s;
+/* ABOUT SECTION */
+
+.about-section{
+background:white;
+padding:120px 10%;
+display:flex;
+justify-content:space-between;
+gap:80px;
+}
+
+.about-left{
+flex:1;
+}
+
+.section-tag{
+letter-spacing:4px;
+font-size:18px;
+color:#8d6bc5;
+margin-bottom:18px;
+}
+
+.about-left h2{
+font-size:64px;
+color:#4b2c74;
+margin-bottom:30px;
+}
+
+.about-text{
+font-size:24px;
+line-height:1.9;
+color:#65488f;
+max-width:700px;
+}
+
+.about-right{
+flex:1;
+display:grid;
+gap:28px;
+}
+
+.info-card{
+background:#f5efff;
+padding:35px 45px;
+border-radius:35px;
+box-shadow:0 8px 20px rgba(170,150,220,.12);
+}
+
+.info-card h3{
+font-size:20px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#7a56b5;
+margin-bottom:18px;
+}
+
+.info-card p{
+font-size:28px;
+color:#4b2c74;
 }
 
 </style>
@@ -110,7 +168,9 @@ transition:.3s;
 
 <body>
 
-<div class="hero">
+<section class="hero">
+
+<div class="content">
 
 <div class="tag">
 COMPUTER SCIENCE UNDERGRADUATE
@@ -127,10 +187,61 @@ Fatima Jinnah Women University, keenly interested
 in creativity and coding.
 </p>
 
-<a href="#" class="btn1">View My Projects</a>
-<a href="#" class="btn2">Get In Touch</a>
+<a href="#" class="btn btn1">View My Projects</a>
+<a href="#" class="btn btn2">Get In Touch</a>
 
 </div>
+
+</section>
+
+
+<section class="about-section">
+
+<div class="about-left">
+
+<p class="section-tag">WHO I AM</p>
+
+<h2>Who I Am</h2>
+
+<p class="about-text">
+I’m a 4th semester Computer Science student at Fatima Jinnah Women University
+with a background in computer science. I’m passionate about combining creativity
+with technology and building meaningful solutions through programming.
+
+<br><br>
+
+My interests include software development, problem solving, and design.
+Beyond coding, I enjoy graphic designing, reading, and exploring emerging technologies.
+</p>
+
+</div>
+
+
+<div class="about-right">
+
+<div class="info-card">
+<h3>Degree</h3>
+<p>BS Computer Science</p>
+</div>
+
+<div class="info-card">
+<h3>University</h3>
+<p>Fatima Jinnah Women University</p>
+</div>
+
+<div class="info-card">
+<h3>Semester</h3>
+<p>4th Semester</p>
+</div>
+
+<div class="info-card">
+<h3>Interests</h3>
+<p>Designing • Reading • Exploring Tech</p>
+</div>
+
+</div>
+
+</section>
 
 </body>
 </html>
