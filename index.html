@@ -343,27 +343,26 @@ Beyond coding, I enjoy graphic designing, reading, and exploring emerging techno
 </section>
 
 
-<!-- SKILLS -->
-
+<!-- MY SKILLS SECTION -->
 <section class="tree-section">
 
 <p class="section-tag">MY SKILLS</p>
-
 <h2>My Skills</h2>
 
 <div class="tree-container">
 
+<!-- top branch -->
 <div class="top-branch">
-<div class="skill-node">C</div>
 
 <div class="skill-node main-node">
 Programming
 <span>C • C++ • Python</span>
 </div>
 
-<div class="skill-node">Python</div>
 </div>
 
+
+<!-- trunk row -->
 <div class="middle-row">
 
 <div class="skill-node">
@@ -384,14 +383,128 @@ Databases
 
 </div>
 
+
+<!-- lower branch -->
 <div class="lower-branch">
-<div class="skill-node">Networking</div>
-<div class="skill-node">Graphic Design</div>
+<div class="skill-node">
+Networking
+</div>
+
+<div class="skill-node">
+Graphic Design
+</div>
 </div>
 
 </div>
 
 </section>
+
+
+<style>
+
+.tree-section{
+background:#f6f1ff;
+padding:120px 10%;
+text-align:center;
+position:relative;
+}
+
+.tree-section h2{
+font-size:62px;
+color:#4b2c74;
+margin-bottom:70px;
+}
+
+.tree-container{
+max-width:1100px;
+margin:auto;
+}
+
+.top-branch{
+display:flex;
+justify-content:center;
+margin-bottom:50px;
+}
+
+.middle-row,
+.lower-branch{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+margin-bottom:50px;
+flex-wrap:wrap;
+}
+
+.skill-node{
+background:white;
+width:280px;
+text-align:center;
+padding:28px 45px;
+border-radius:50px;
+border:1px solid #e2d7fb;
+box-shadow:0 8px 18px rgba(150,130,210,.12);
+font-size:30px;
+color:#5a3d88;
+font-weight:bold;
+}
+
+.skill-node span{
+display:block;
+font-size:18px;
+font-weight:normal;
+margin-top:10px;
+}
+
+.main-node{
+background:#eee6ff;
+}
+
+.trunk{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.trunk-title{
+background:#9273df;
+color:white;
+padding:30px 80px;
+border-radius:55px;
+font-size:32px;
+font-weight:bold;
+box-shadow:0 10px 20px rgba(146,115,223,.2);
+}
+
+.trunk-line{
+width:8px;
+height:100px;
+background:#b59be8;
+border-radius:20px;
+margin-top:12px;
+}
+
+.tree-section::before{
+content:"❀";
+position:absolute;
+left:70px;
+top:90px;
+font-size:120px;
+opacity:.08;
+color:#8e70c9;
+}
+
+.tree-section::after{
+content:"❁";
+position:absolute;
+right:70px;
+bottom:80px;
+font-size:120px;
+opacity:.08;
+color:#8e70c9;
+}
+
+</style>
 
 </body>
 </html>
