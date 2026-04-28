@@ -343,56 +343,32 @@ Beyond coding, I enjoy graphic designing, reading, and exploring emerging techno
 </section>
 
 
-<!-- MY SKILLS SECTION -->
-<section class="tree-section">
+<!-- SKILLS SECTION -->
+<section class="skills-section">
 
-<p class="section-tag">MY SKILLS</p>
+<div class="section-tag">MY SKILLS</div>
 <h2>My Skills</h2>
 
-<div class="tree-container">
+<div class="tree">
 
-<!-- top branch -->
-<div class="top-branch">
-
-<div class="skill-node main-node">
+<div class="skill programming">
 Programming
 <span>C • C++ • Python</span>
 </div>
 
-</div>
-
-
-<!-- trunk row -->
 <div class="middle-row">
-
-<div class="skill-node">
-Assembly
-</div>
+<div class="skill">Assembly</div>
 
 <div class="trunk">
-<div class="trunk-title">
 Computer Science
 </div>
 
-<div class="trunk-line"></div>
+<div class="skill">Databases</div>
 </div>
 
-<div class="skill-node">
-Databases
-</div>
-
-</div>
-
-
-<!-- lower branch -->
-<div class="lower-branch">
-<div class="skill-node">
-Networking
-</div>
-
-<div class="skill-node">
-Graphic Design
-</div>
+<div class="bottom-row">
+<div class="skill">Networking</div>
+<div class="skill">Graphic Design</div>
 </div>
 
 </div>
@@ -400,110 +376,113 @@ Graphic Design
 </section>
 
 
-<style>
 
-.tree-section{
-background:#f6f1ff;
+<style>
+.skills-section{
 padding:120px 10%;
+background:#f6f1ff;
 text-align:center;
-position:relative;
+font-family:"Times New Roman",serif;
 }
 
-.tree-section h2{
-font-size:62px;
+.section-tag{
+letter-spacing:5px;
+font-size:20px;
+color:#8b6acb;
+margin-bottom:20px;
+}
+
+.skills-section h2{
+font-size:78px;
 color:#4b2c74;
 margin-bottom:70px;
 }
 
-.tree-container{
-max-width:1100px;
+.tree{
+max-width:1200px;
 margin:auto;
 }
 
-.top-branch{
-display:flex;
-justify-content:center;
-margin-bottom:50px;
+/* top skill */
+.programming{
+margin:0 auto 80px auto;
+background:#eee7ff;
 }
 
-.middle-row,
-.lower-branch{
+/* middle row */
+.middle-row{
+display:grid;
+grid-template-columns:300px 440px 300px;
+justify-content:center;
+align-items:center;
+gap:80px;
+margin-bottom:80px;
+}
+
+/* bottom row */
+.bottom-row{
+display:flex;
+justify-content:center;
+gap:180px;
+}
+
+/* all skill blocks */
+.skill{
+width:300px;
+height:120px;
+background:white;
+border-radius:45px;
 display:flex;
 justify-content:center;
 align-items:center;
-gap:40px;
-margin-bottom:50px;
-flex-wrap:wrap;
-}
-
-.skill-node{
-background:white;
-width:280px;
-text-align:center;
-padding:28px 45px;
-border-radius:50px;
-border:1px solid #e2d7fb;
-box-shadow:0 8px 18px rgba(150,130,210,.12);
+flex-direction:column;
 font-size:30px;
-color:#5a3d88;
 font-weight:bold;
+color:#4b2c74;
+box-shadow:0 8px 18px rgba(120,90,190,.08);
 }
 
-.skill-node span{
-display:block;
+.programming span{
 font-size:18px;
 font-weight:normal;
 margin-top:10px;
 }
 
-.main-node{
-background:#eee6ff;
-}
-
+/* center trunk */
 .trunk{
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-
-.trunk-title{
+width:440px;
+height:130px;
 background:#9273df;
+border-radius:50px;
+display:flex;
+justify-content:center;
+align-items:center;
 color:white;
-padding:30px 80px;
-border-radius:55px;
-font-size:32px;
+font-size:38px;
 font-weight:bold;
-box-shadow:0 10px 20px rgba(146,115,223,.2);
+box-shadow:0 12px 22px rgba(120,90,190,.2);
 }
 
-.trunk-line{
-width:8px;
-height:100px;
-background:#b59be8;
-border-radius:20px;
-margin-top:12px;
-}
-
-.tree-section::before{
+/* subtle floral decoration */
+.skills-section::before{
 content:"❀";
 position:absolute;
-left:70px;
-top:90px;
-font-size:120px;
-opacity:.08;
-color:#8e70c9;
+left:35px;
+top:80px;
+font-size:90px;
+color:#e2d8ff;
+opacity:.35;
 }
 
-.tree-section::after{
-content:"❁";
+.skills-section::after{
+content:"❀";
 position:absolute;
-right:70px;
-bottom:80px;
-font-size:120px;
-opacity:.08;
-color:#8e70c9;
+right:35px;
+bottom:70px;
+font-size:90px;
+color:#e2d8ff;
+opacity:.35;
 }
-
 </style>
 
 </body>
