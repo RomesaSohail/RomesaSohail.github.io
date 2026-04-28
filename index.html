@@ -8,96 +8,167 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:"Times New Roman", serif;
+font-family:"Times New Roman",serif;
 }
 
 body{
-height:100vh;
-display:flex;
-align-items:center;
-padding-left:10%;
-background:#ffeef5; /* baby pink */
+background:#060b1f;
+color:white;
+min-height:100vh;
 }
 
+/* Navbar */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:30px 70px;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+font-size:38px;
+color:#bb86fc;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:45px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#b8b9d9;
+font-size:22px;
+}
+
+/* Hero Section */
 .hero{
-max-width:850px;
+height:85vh;
+display:flex;
+align-items:center;
+padding-left:18%;
+}
+
+.content{
+max-width:760px;
 }
 
 .tag{
 display:inline-block;
-background:#ffdbe8;
-color:#b03060;
 padding:12px 28px;
 border-radius:30px;
+background:#1f193d;
+border:1px solid #6c4cff;
+color:#bb86fc;
 letter-spacing:2px;
-font-size:18px;
 margin-bottom:35px;
+font-size:18px;
 }
 
 h1{
-font-size:85px;
-line-height:1.1;
-color:#8b1e5d; /* dark pink */
-margin-bottom:25px;
+font-size:92px;
+line-height:1.05;
+margin-bottom:20px;
 }
 
 .highlight{
-color:#c2185b;
+color:#a66dff;
 }
 
 p{
-font-size:28px;
-line-height:1.7;
-max-width:700px;
-color:#9d2d68;
-margin-bottom:50px;
+font-size:30px;
+line-height:1.6;
+color:#aeb1d5;
+margin-bottom:45px;
 }
 
-a{
-text-decoration:none;
-padding:18px 40px;
-border-radius:35px;
+/* Buttons */
+.btn{
 display:inline-block;
+text-decoration:none;
+padding:20px 42px;
+border-radius:40px;
 margin-right:18px;
 font-size:22px;
 }
 
-.btn1{
-background:#d85a93;
+.primary{
+background:linear-gradient(to right,#c58fff,#8f6dff);
 color:white;
 }
 
-.btn2{
-border:2px solid #d85a93;
-color:#b03060;
-background:#fff8fb;
+.secondary{
+border:1px solid #7d63ff;
+color:#bb86fc;
+}
+
+/* glow effects */
+body:before{
+content:"";
+position:absolute;
+top:120px;
+right:120px;
+width:250px;
+height:250px;
+background:#7b4dff;
+filter:blur(120px);
+opacity:.2;
+border-radius:50%;
+}
+
+body:after{
+content:"";
+position:absolute;
+bottom:60px;
+left:60px;
+width:220px;
+height:220px;
+background:#4f6fff;
+filter:blur(120px);
+opacity:.15;
+border-radius:50%;
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
+<nav>
+<div class="logo">RS</div>
+
+<ul>
+<li><a href="#">About</a></li>
+<li><a href="#">Skills</a></li>
+<li><a href="#">Projects</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="content">
 
 <div class="tag">
-COMPUTER SCIENCE UNDERGRAD
+COMPUTER SCIENCE STUDENT
 </div>
 
 <h1>
-Hey There,<br>
-It's Me <span class="highlight">Romesa Sohail</span>
+Hello, I'm <br>
+<span class="highlight">Romesa Sohail</span>
 </h1>
 
 <p>
-A passionate CS undergrad currently studying at
-Fatima Jinnah Women University, keenly interested in
-creativity and coding.
+A passionate CS undergraduate at Fatima Jinnah Women University,
+exploring the world through code, creativity and innovation.
 </p>
 
-<a href="#" class="btn1">View My Projects</a>
-<a href="#" class="btn2">Get In Touch</a>
+<a href="#" class="btn primary">View My Projects</a>
+<a href="#" class="btn secondary">Get In Touch</a>
 
 </div>
+</section>
 
 </body>
 </html>
